@@ -1,0 +1,48 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #fff4d4;
+  font-family: "Merriweather", serif;
+  font-size: 1rem;
+  color: #6a0041;
+}
+
+/* Header */
+.container {
+  max-width: 1000px;
+  margin: auto;
+}
+
+.flexbox {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.col-3 {
+  width: 25%;
+}
+
+/* Main */
+h1,
+h2,
+h3,
+p {
+  text-align: center;
+}
+
+.bio {
+  font-size: 16px;
+}
+
+/* Footer */
+footer {
+  font-style: italic;
+  font-size: 16px;
+  background-color: #fcc394;
+  text-align: center;
+  padding: 8px;
+}
