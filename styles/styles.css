@@ -25,6 +25,11 @@ nav li {
   /* text-decoration: none; */
 }
 
+nav a {
+  text-decoration: none;
+  color: #6a0041;
+}
+
 header div {
   margin: 1.5rem 0.5rem;
 }
@@ -38,7 +43,15 @@ p {
 }
 
 .bio {
+  padding: 1.5rem;
+  /* margin: 0 2rem; */
+  background-color: #fcc394;
   font-size: 16px;
+}
+
+p a {
+  text-decoration: none;
+  color: #6a0041;
 }
 
 /* Footer */
@@ -47,5 +60,6 @@ footer {
   font-size: 16px;
   background-color: #fcc394;
   text-align: center;
-  padding: 8px;
+  margin: 0 10rem;
+  padding: 0.5rem;
 }
