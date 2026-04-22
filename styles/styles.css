@@ -6,11 +6,6 @@ body {
 }
 
 /* Header */
-.container {
-  max-width: 1000px;
-  margin: auto;
-}
-
 .flexbox {
   display: flex;
   flex-wrap: wrap;
@@ -18,8 +13,20 @@ body {
   align-items: flex-start;
 }
 
-.col-3 {
-  width: 25%;
+header img {
+  display: inline-block;
+  width: 13rem;
+}
+
+nav li {
+  display: inline-block;
+  font-size: 1rem;
+  margin: 10px;
+  /* text-decoration: none; */
+}
+
+header div {
+  margin: 1.5rem 0.5rem;
 }
 
 /* Main */
