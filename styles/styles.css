@@ -1,5 +1,5 @@
 body {
-  background-color: #0c212a;
+  background-color: #7b0748;
   font-family: "Merriweather", serif;
   font-size: 1rem;
   color: #ffffff;
@@ -28,7 +28,7 @@ nav li {
 nav a {
   font-weight: bold;
   text-decoration: none;
-  color: #a3fcff;
+  color: #ffffff;
 }
 
 .theme-toggle {
@@ -36,11 +36,11 @@ nav a {
 }
 
 a:visited {
-  color: #ffffff;
+  color: #000000;
 }
 
 a:hover {
-  color: #ffffff;
+  color: #000000;
 }
 
 /* Main */
@@ -54,7 +54,8 @@ p {
 .bio {
   padding: 1.5rem;
   /* margin: 0 2rem; */
-  background-color: #02235b;
+  background-color: #c987a5;
+  color: #000000;
   font-size: 16px;
 }
 
@@ -67,7 +68,8 @@ p a {
 footer {
   font-style: italic;
   font-size: 1rem;
-  background-color: #5d4d88;
+  background-color: #c987a5;
+  color: #000000;
   text-align: center;
   margin: 0 10rem;
   padding: 0.5rem;
