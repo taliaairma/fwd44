@@ -113,6 +113,52 @@ header div {
 /* Individual Project Card */
 .projects-wrapper {
   display: flex;
+  align-items: center;
+  gap: 1rem;
+  background-color: #1f001b;
+  border-radius: 12px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 2px 8px rgba(255, 255, 255, 0.637);
+  transition:
+    transform 0.2s,
+    box-shadow 0.2s;
+}
+
+.projects-wrapper:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.637);
+}
+
+/* Project Image */
+.project-image {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+/* Project Text Area */
+.project-title h2,
+.project-title h3 {
+  margin: 0;
+  font-size: 1.125rem;
+}
+
+.project-date {
+  margin: 0.25rem 0 0;
+  font-size: 0.875rem;
+  color: #ffffff;
+}
+
+/* Back to Top Link */
+main > p {
+  text-align: center;
+  margin: 2rem 0;
+}
+
+main > p a {
+  display: inline-block;
 }
 
 /* Footer */
