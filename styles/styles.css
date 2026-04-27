@@ -28,7 +28,7 @@ h2 {
 
 /* Links */
 a {
-  color: #1f001b;
+  color: #ffffff;
   text-decoration: none;
 }
 
@@ -60,13 +60,19 @@ nav ul {
   margin: 0;
 }
 
+nav a {
+  font-weight: 500;
+  padding: 0.5rem;
+}
+
 /* Theme Toggle Buttons */
 header div {
   display: flex;
   gap: 0.5rem;
 }
 
-#theme-toggle {
+#theme-toggle-light,
+#theme-toggle-dark {
   background: none;
   border: 1px solid #ffffff;
   border-radius: 50%;
@@ -76,7 +82,8 @@ header div {
   transition: transform 0.2s;
 }
 
-#theme-toggle:hover {
+#theme-toggle-light:hover,
+#theme-toggle-dark:hover {
   transform: scale(1.1);
 }
 
@@ -159,15 +166,250 @@ main > p {
 
 main > p a {
   display: inline-block;
+  color: #ffffff;
+}
+
+main > p a:hover {
+  text-decoration: none;
+  color: #e05a8a;
+  transform: scale(1.1);
 }
 
 /* Footer */
 footer {
-  font-style: italic;
-  font-size: 1rem;
-  background-color: #c987a5;
-  color: #000000;
   text-align: center;
-  margin: 0 10rem;
-  padding: 0.5rem;
+  margin-top: 3rem;
+  padding-top: 1rem;
+  border-top: 1px solid #ffffff;
+  font-size: 0.875rem;
+}
+
+/* --------------------------------
+# Desktop Styles
+----------------------------------- */
+@media (min-width: 48em) {
+  body {
+    max-width: 1920px;
+    margin: 0 auto;
+    padding: 2rem 4rem;
+  }
+
+  h1 {
+    font-size: 3rem;
+  }
+
+  h2 {
+    font-size: 1.75rem;
+  }
+
+  /* Project Grid */
+  .section-projects {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+  }
+
+  /* Make all project cards in a row have consistent styling */
+  .projects-wrapper {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .project-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+
+  .project-title h2,
+  .project-title h3 {
+    margin-top: 0.75rem;
+  }
+
+  /* Category Headings */
+  .projects > h2 {
+    width: 100%;
+  }
+
+  /* Project 1 & 2: HTML/CSS */
+  .projects:first-child {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+  }
+
+  .projects:first-child .projects-wrapper {
+    flex: 1;
+    min-width: calc(50% - 2rem);
+    margin-bottom: 0;
+  }
+
+  /* Projects 3 & 4: Javascript */
+  .projects:nth-child(2) {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+  }
+
+  .projects:nth-child(2) .projects-wrapper {
+    flex: 1;
+    min-width: calc(50% - 2rem);
+    margin-bottom: 0;
+  }
+
+  /* Projects 5, 6 & 7: WordPress */
+  .projects:nth-child(3) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+  }
+
+  .projects:nth-child(3) .projects-wrapper {
+    flex: 1;
+    min-width: calc(33.333% - 2rem);
+    margin-bottom: 0;
+  }
+
+  /* Project 8 & 9: Online Stores */
+  .projects:nth-child(4) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+  }
+
+  .projects:nth-child(4) .projects-wrapper {
+    flex: 1;
+    min-width: calc(50% - 2rem);
+    margin-bottom: 0;
+  }
+}
+
+/* ------------------------------------------
+# Extra Large Desktop
+-------------------------------------------- */
+
+@media (min-width: 75em) {
+  body {
+    padding: 2rem 6rem;
+  }
+
+  .project-image {
+    height: 240px;
+  }
+
+  .projects-wrapper {
+    transition:
+      transform 0.3s,
+      box-shadow 0.3s;
+  }
+
+  .projects-wrapper:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 24px rgba(255, 255, 255, 0.637);
+  }
+}
+
+/* --------------------------------
+# Ultra Wide 
+-------------------------------- */
+@media (min-width: 120em) {
+  body {
+    max-width: 1920xp;
+    margin: 0 atuo;
+    padding: 2rem 8rem;
+  }
+
+  .section-projects {
+    gap: 4rem;
+  }
+
+  .project-image {
+    height: 260px;
+  }
+
+  .projects > h2 {
+    font-size: 2rem;
+  }
+
+  .project-title h2,
+  .project-title h3 {
+    font-size: 1.35rem;
+  }
+
+  .project-date {
+    font-size: 1rem;
+  }
+}
+
+/* --------------------------------
+# Dark Mode Styles
+-------------------------------- */
+body.dark-mode {
+  background-color: #1f001b;
+  color: #ffffff;
+}
+
+body.dark-mode .bio {
+  background-color: #1f001b;
+  border-left-color: #ff7bac;
+  border-bottom-color: #ff7bac;
+  color: #f5e6e6;
+}
+
+body.dark-mode .projects-wrapper {
+  background-color: #1f001b;
+  box-shadow: 0 2px 8px rgba(255, 255, 255, 0.637);
+}
+
+body.dark-mode .projects-wrapper:hover {
+  box-shadow: rgba(255, 255, 255, 0.637);
+}
+
+body.dark-mode .project-date {
+  color: #c0a0a0;
+}
+
+body.dark-mode a {
+  color: #ffa0c0;
+}
+
+body.dark-mode a:hover {
+  color: #ffffff;
+}
+
+body.dark-mode main > p a {
+  /* background-color: #ff7bac; */
+  color: #ffffff;
+}
+
+body.dark-mode footer {
+  border-top-color: #7b0748;
+}
+
+/* Dark Mode theme buttons - active state */
+body.dark-mode #theme-toggle-light {
+  opacity: 0.5;
+  border-color: #888;
+}
+
+body.dark-mode #theme-toggle-dark {
+  opacity: 1;
+  border-color: #ffffff;
+  background-color: rgba(255, 123, 172, 0.219);
+}
+
+/* Light Mode theme buttons - active state */
+body:not(.dark-mode) #theme-toggle-light {
+  opacity: 1;
+  border-color: #ffffff;
+  background-color: rgba(251, 241, 252, 0.788);
+}
+
+body:not(.dark-mode) #theme-toggle-dark {
+  opacity: 0.5;
+  border-color: #888;
 }
