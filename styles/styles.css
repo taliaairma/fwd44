@@ -72,6 +72,14 @@ p a {
   gap: 1rem;
 }
 
+.project-wrapper {
+  /* flex: 1 1 auto; */
+}
+
+.projects h2 {
+  display: inline-block;
+}
+
 .project-image {
   width: 320px;
 }
