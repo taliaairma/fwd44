@@ -33,29 +33,31 @@ a {
 }
 
 a:hover {
-  color: #ff7bac;
-  text-decoration: underline;
+  color: #1f001b;
+  text-decoration: none;
 }
 
 /* Header */
 .flexbox {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: baseline;
   flex-wrap: wrap;
   gap: 1rem;
   margin-bottom: 2rem;
 }
 
 .flexbox img {
-  max-width: 80px;
-  height: auto;
+  width: 120px;
+  align-items: baseline;
+  /* height: auto; */
 }
 
 nav ul {
   display: flex;
+  justify-content: center;
   list-style: none;
-  gap: 1rem;
+  gap: 7rem;
   padding: 0;
   margin: 0;
 }
@@ -122,11 +124,13 @@ header div {
   display: flex;
   align-items: center;
   gap: 1rem;
-  background-color: #1f001b;
+  background-color: #c987a5;
+  color: #000000;
   border-radius: 12px;
   padding: 1rem;
   margin-bottom: 1rem;
-  box-shadow: 0 2px 8px rgba(255, 255, 255, 0.637);
+  border-left: 8px solid #1f001b;
+  border-bottom: 4px solid #1f001b;
   transition:
     transform 0.2s,
     box-shadow 0.2s;
@@ -155,7 +159,7 @@ header div {
 .project-date {
   margin: 0.25rem 0 0;
   font-size: 0.875rem;
-  color: #ffffff;
+  color: #000000;
 }
 
 /* Back to Top Link */
@@ -173,6 +177,58 @@ main > p a:hover {
   text-decoration: none;
   color: #e05a8a;
   transform: scale(1.1);
+}
+
+/* Let's Connect Section */
+.social-media {
+  text-align: center;
+  background-color: #c987a5;
+  border-left: 8px solid #1f001b;
+  border-bottom: 4px solid #1f001b;
+  border-radius: 24px;
+  color: #000000;
+  padding: 2rem 1.5rem;
+  margin: 3rem 0 2rem;
+}
+
+.social-media h2 {
+  color: #ffffff;
+  margin-bottom: 0.5rem;
+}
+
+.connect-message {
+  font-size: 1.125rem;
+  max-width: 500px;
+  margin: 0 auto 1.5rem;
+}
+
+.social-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.social-icon {
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.social-icon:hover {
+  transform: translateY(-4px);
+  text-decoration: none;
+}
+
+.social-icon .icon {
+  width: 40px;
+  height: 40px;
+}
+
+.social-icon span {
+  font-size: 0.875rem;
+  font-weight: 500;
 }
 
 /* Footer */
@@ -221,7 +277,6 @@ footer {
     object-fit: cover;
   }
 
-  .project-title h2,
   .project-title h3 {
     margin-top: 0.75rem;
   }
@@ -285,6 +340,26 @@ footer {
     flex: 1;
     min-width: calc(50% - 2rem);
     margin-bottom: 0;
+  }
+
+  /* Let's Connect Desktop Styles */
+  .social-media {
+    padding: 3rem 2rem;
+    margin: 4rem 0 2rem;
+  }
+
+  .connect-message {
+    font-size: 1.25rem;
+    max-width: 600px;
+  }
+
+  .social-icon .icon {
+    width: 48px;
+    height: 48px;
+  }
+
+  .social-links {
+    gap: 3rem;
   }
 }
 
@@ -355,13 +430,16 @@ body.dark-mode {
 
 body.dark-mode .bio {
   background-color: #1f001b;
-  border-left-color: #ff7bac;
-  border-bottom-color: #ff7bac;
+  border-left-color: #7b0748;
+  border-bottom-color: #7b0748;
   color: #f5e6e6;
 }
 
 body.dark-mode .projects-wrapper {
   background-color: #1f001b;
+  border-left: 8px solid #7b0748;
+  border-bottom: 2px solid #7b0748;
+  color: #ffffff;
   box-shadow: 0 2px 8px rgba(255, 255, 255, 0.637);
 }
 
@@ -370,7 +448,7 @@ body.dark-mode .projects-wrapper:hover {
 }
 
 body.dark-mode .project-date {
-  color: #c0a0a0;
+  color: #ffffff;
 }
 
 body.dark-mode a {
