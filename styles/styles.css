@@ -57,7 +57,7 @@ nav ul {
   display: flex;
   justify-content: center;
   list-style: none;
-  gap: 7rem;
+  gap: 2rem;
   padding: 0;
   margin: 0;
 }
@@ -393,8 +393,8 @@ footer {
 -------------------------------- */
 @media (min-width: 120em) {
   body {
-    max-width: 1920xp;
-    margin: 0 atuo;
+    max-width: 1920px;
+    margin: 0 auto;
     padding: 2rem 8rem;
   }
 
@@ -440,7 +440,7 @@ body.dark-mode .projects-wrapper {
   border-left: 8px solid #7b0748;
   border-bottom: 2px solid #7b0748;
   color: #ffffff;
-  box-shadow: 0 2px 8px rgba(255, 255, 255, 0.637);
+  /* box-shadow: 0 2px 8px rgba(255, 255, 255, 0.637); */
 }
 
 body.dark-mode .projects-wrapper:hover {
@@ -466,6 +466,27 @@ body.dark-mode main > p a {
 
 body.dark-mode footer {
   border-top-color: #7b0748;
+}
+
+body.dark-mode .social-media {
+  background-color: #1f001b;
+  border-left: 8px solid #7b0748;
+  border-bottom: 4px solid #7b0748;
+  color: #ffffff;
+}
+
+body.dark-mode .social-media h2 {
+  color: #ffa0c0;
+}
+
+body.dark-mode .social-icon {
+  filter: drop-shadow(0 0 2px #ffffff) brightness(1.1);
+}
+
+body.dark-mode .social-icon:hover {
+  filter: brightness(1.2);
+  transform: translateY(-4px);
+  /* box-shadow: 0 2px 8px rgba(251, 241, 252, 0.788); */
 }
 
 /* Dark Mode theme buttons - active state */
