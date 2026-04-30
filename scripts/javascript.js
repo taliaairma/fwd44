@@ -9,11 +9,31 @@ document.addEventListener('DOMContentLoaded', function() {
     // Check if user previously had a preference saved in localStorage
     const savedTheme = localStorage.getItem('theme');
 
+
+    // Get all social icons that need to be swapped
+    const socialIcons = document.querySelectorAll('.social-icon');
+
+    // Function to update icons based on theme
+    function updateIcons(theme) {
+        socialIcons.forEach(icon => {
+            const newSrc = theme === 'dark'
+            ? icon.getAttribute('data-dark-src')
+            : icon.getAttribute('data-light-src');
+
+            if (newSrc) {
+                icon.src = newSrc;
+            }
+        });
+    }
+
+
     // If there's a saved preference, apply it
     if (savedTheme === 'dark') {
-        document.body.classList.add('dark-mode'); }
-        else if (savedTheme === 'light') {
+        document.body.classList.add('dark-mode');
+        updateIcons('dark'); 
+    } else if (savedTheme === 'light') {
             document.body.classList.remove('dark-mode');
+            updateIcons('light');
         }
     
 
@@ -21,12 +41,14 @@ document.addEventListener('DOMContentLoaded', function() {
     function setLightMode() {
         document.body.classList.remove('dark-mode');
         localStorage.setItem('theme','light');
+        updateIcons('light');
     }
 
     // Function to switch to Dark Mode
     function setDarkMode() {
         document.body.classList.add('dark-mode');
         localStorage.setItem('theme', 'dark');
+        updateIcons('dark');
     }
 
     // Add event listeners to buttons

@@ -27,7 +27,7 @@ h2 {
 }
 
 /* Links */
-a {
+/* a {
   color: #ffffff;
   text-decoration: none;
 }
@@ -35,7 +35,7 @@ a {
 a:hover {
   color: #ffa0c0;
   text-decoration: none;
-}
+} */
 
 /* Header */
 .flexbox {
@@ -67,15 +67,14 @@ nav ul {
 }
 
 nav a {
+  color: #ffffff;
+  text-decoration: none;
   font-weight: 500;
   padding: 0.5rem;
 }
 
 nav a:hover {
   color: #ffa0c0;
-  text-shadow:
-    0 0 5px rgba(255, 255, 255, 0.8),
-    0 0 10px rgba(255, 255, 255, 0.5);
 }
 
 /* Theme Toggle Buttons */
@@ -87,14 +86,14 @@ header div {
 
 #theme-toggle-light,
 #theme-toggle-dark {
-  background: none;
-  border: 1px solid #ffffff;
   border-radius: 50%;
   font-size: 1.25rem;
   cursor: pointer;
   padding: 0.25rem 0.5rem;
   transition: transform 0.2s;
+  border: none;
 }
+
 
 #theme-toggle-light:hover,
 #theme-toggle-dark:hover {
@@ -148,9 +147,23 @@ header div {
     box-shadow 0.2s;
 }
 
-.projects-wrapper:hover {
+.project-card-link {
+  text-decoration: none;
+  display: block;
+}
+
+.project-card-link:hover .projects-wrapper {
   transform: translateY(-4px);
   box-shadow: 0 4px 12px rgba(255, 255, 255, 0.637);
+}
+
+.project-card-link:focus {
+  outline: none;
+}
+
+.project-card-link:focus-visible .projects-wrapper {
+  outline: 2px solid #ffa0c0;
+  outline-offset: 2px;
 }
 
 /* Project Image */
@@ -199,7 +212,7 @@ main > p a:hover {
   border-left: 8px solid #1f001b;
   border-bottom: 4px solid #1f001b;
   border-radius: 24px;
-  color: #000000;
+  color: #1f001b;
   padding: 2rem 1.5rem;
   margin: 3rem 0 2rem;
 }
@@ -211,8 +224,10 @@ main > p a:hover {
 
 .connect-message {
   font-size: 1.125rem;
+  font-weight: bold;
   max-width: 500px;
   margin: 0 auto 1.5rem;
+  color: #000000;
 }
 
 .social-links {
@@ -221,6 +236,7 @@ main > p a:hover {
   justify-content: center;
   gap: 2rem;
 }
+
 
 .social-icon {
   display: inline-flex;
@@ -512,15 +528,13 @@ body.dark-mode .social-media h2 {
   color: #ffa0c0;
 }
 
-body.dark-mode .social-icon {
-  filter: drop-shadow(0 0 2px #ffffff) brightness(1.1);
+body.dark-mode .connect-message {
+  color: #ffa0c0;
 }
 
 body.dark-mode .social-icon:hover {
-  filter: brightness(1.2);
   transform: translateY(-4px);
-  /* box-shadow: 0 2px 8px rgba(251, 241, 252, 0.788); */
-}
+  opacity: 0.9;
 
 /* Dark Mode theme buttons - active state */
 body.dark-mode #theme-toggle-light {
