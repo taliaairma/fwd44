@@ -113,9 +113,6 @@ header div {
 
 /* MAIN */
 /* Bio */
-.bio {
-  gap: 2rem;
-}
 
 .bio h2 {
   font-size: 2rem;
@@ -133,6 +130,10 @@ header div {
   border-left: 6.5px solid #1f001b;
   border-bottom: 3.5px solid #1f001b;
   margin: 1rem 0 4rem 0;
+}
+
+.bio {
+  gap: 2rem;
 }
 
 /* Projects Section */
@@ -477,7 +478,7 @@ body.dark-mode .bio {
 }
 
 body.dark-mode .bio h2,
-.section-projects h2 {
+body.dark-mode .section-projects h2 {
   text-decoration: #ffa0c0 wavy underline;
 }
 
@@ -533,6 +534,7 @@ body.dark-mode .social-icon:hover {
   transform: translateY(-4px);
   opacity: 0.9;
 }
+
 /* Dark Mode theme buttons - active state */
 body.dark-mode #theme-toggle-light {
   border-color: #ffffff;
