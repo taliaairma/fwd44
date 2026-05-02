@@ -59,4 +59,30 @@ document.addEventListener('DOMContentLoaded', function() {
     if (darkModeBtn) {
         darkModeBtn.addEventListener('click', setDarkMode);
     }
+
+    // Back to top button - Show on scroll 
+    const backToTopBtn = document.querySelector('.back-to-top');
+
+    function checkScroll() {
+        if (window.scrollY > 300) {
+            backToTopBtn.classList.add('show');
+        } else {
+            backToTopBtn.classList.remove('show');
+        }
+    }
+    
+    function scrollToTop(event) {
+        event.preventDefault();
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    }
+
+    if (backToTopBtn) {
+        window.addEventListener('scroll', checkScroll);
+        backToTopBtn.addEventListener('click', scrollToTop);
+        checkScroll();
+    }
+
 });

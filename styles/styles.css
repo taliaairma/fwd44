@@ -44,6 +44,10 @@ a {
   text-decoration: none;
 }
 
+a.logo {
+  color: #ffffff;
+}
+
 a:hover {
   color: #ffa0c0;
   text-decoration: none;
@@ -239,6 +243,10 @@ header div {
   margin-bottom: 0.5rem;
 }
 
+.social-icon a {
+  color: #000000;
+}
+
 .connect-message {
   font-size: 1.125rem;
   font-weight: bold;
@@ -277,20 +285,22 @@ header div {
 }
 
 /* Back to Top Link */
-main > p {
-  text-align: center;
-  margin: 2rem 0;
+.back-to-top {
+  position: fixed;
+  cursor: pointer;
+  bottom: 30px;
+  right: 1rem;
+  z-index: 1000;
+  visibility: hidden;
 }
 
-main > p a {
-  display: inline-block;
-  color: #ffffff;
+.back-to-top:hover {
+  transform: translateY(-4px);
 }
 
-main > p a:hover {
-  text-decoration: none;
-  color: #e05a8a;
-  transform: scale(1.1);
+.back-to-top.show {
+  opacity: 1;
+  visibility: visible;
 }
 
 /* Footer */
@@ -533,6 +543,10 @@ body.dark-mode .connect-message {
 body.dark-mode .social-icon:hover {
   transform: translateY(-4px);
   opacity: 0.9;
+}
+
+body.dark-mode .back-to-top img {
+  filter: brightness(0) invert(1);
 }
 
 /* Dark Mode theme buttons - active state */
